@@ -81,12 +81,25 @@ html body {
 h2 {
   font-size: 2rem;
   position: relative;
-  left: -30vw;
+  left: -25vw;
+}
+
+h4 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid gray;
 }
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto auto auto;
+}
+.container a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #636161;
+}
+.container a:hover {
+  text-decoration: underline;
 }
 
 .about {
@@ -115,8 +128,14 @@ h2 {
   align-items: center;
 }
 .about .about-container .about-column div {
-  width: 50%;
-  padding-left: 10%;
+  width: 75%;
+  margin-left: 35%;
+  padding-left: 3%;
+  border-left: 2px solid #E6E9ED;
+}
+.about .about-container .about-column div li {
+  list-style-type: none;
+  margin-bottom: 10px;
 }
 
 .skills {
@@ -129,6 +148,7 @@ h2 {
 .skills .skills-column {
   display: flex;
   justify-content: space-around;
+  width: 53vw;
 }
 .skills .skills-column h3 {
   display: flex;
@@ -138,7 +158,7 @@ h2 {
   border-bottom: 2px solid rgba(0, 0, 0, 0.295);
 }
 .skills .skills-column ul {
-  width: 200px;
+  width: calc(30% - 5px);
 }
 .skills .skills-column ul li {
   margin-left: 20px;
@@ -150,12 +170,11 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-weight: 200;
 }
 .experience .experience-column {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 53vw;
 }
 .experience .experience-column .experience-timeline {
   position: relative;
@@ -165,6 +184,7 @@ h2 {
   margin-left: 25px;
 }
 .experience .experience-column .experience-timeline h3 span {
+  margin-left: 5px;
   font-size: 14px;
   color: #757575;
 }
@@ -172,7 +192,7 @@ h2 {
   content: "";
   display: inline-block;
   position: absolute;
-  background-color: #5fabf1;
+  background-color: #5f8df185;
   border-radius: 100%;
   width: 18px;
   height: 18px;
@@ -181,9 +201,18 @@ h2 {
   border: 0.5px solid #fff;
   z-index: 2;
 }
-.experience .experience-column .experience-timeline .experience-timline-body {
+.experience .experience-column .experience-timeline .experience-timeline-body {
+  display: flex;
+  flex-direction: row;
   padding-left: 25px;
   border-left: 2px solid #E6E9ED;
+}
+.experience .experience-column .experience-timeline .experience-timeline-body div {
+  width: 50%;
+}
+.experience .experience-column .experience-timeline .experience-timeline-body p {
+  color: #757575;
+  padding-top: 3px;
 }
 
 .education {
@@ -194,7 +223,7 @@ h2 {
 .education .education-column {
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 53vw;
 }
 .education .education-column .education-timeline {
   position: relative;
@@ -204,6 +233,7 @@ h2 {
   margin-left: 25px;
 }
 .education .education-column .education-timeline h3 span {
+  margin-left: 5px;
   font-size: 14px;
   color: #757575;
 }
@@ -211,7 +241,7 @@ h2 {
   content: "";
   display: inline-block;
   position: absolute;
-  background-color: #5fabf1;
+  background-color: #5f8df185;
   border-radius: 100%;
   width: 18px;
   height: 18px;
@@ -220,15 +250,100 @@ h2 {
   border: 0.5px solid #fff;
   z-index: 2;
 }
-.education .education-column .education-timeline p {
+.education .education-column .education-timeline .education-timeline-body {
+  display: flex;
+  flex-direction: row;
   padding-left: 25px;
   border-left: 2px solid #E6E9ED;
 }
+.education .education-column .education-timeline .education-timeline-body div {
+  width: 50%;
+}
+.education .education-column .education-timeline .education-timeline-body p {
+  color: #757575;
+}
 
 .portfolio {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.portfolio .portfolio-column {
+  width: 53vw;
+}
+
+.reference {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reference-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.reference-column-img {
+  width: 380px;
+  height: auto;
+  border-radius: 2.5%;
+  margin-left: 30px;
+}
+
+.reference-column-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reference-column-body h3 {
+  font-size: calc(1.1rem + .6vw);
+}
+.reference-column-body p {
+  color: #4f4f4f;
+}
+
+.highlight {
+  color: #095aa7;
+}
+
+.text-muted {
+  color: #757575;
+}
+
+.go-to-top {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: #ada6a6;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+}
+
+.go-to-top:hover {
+  background-color: #555;
+  /* Add a dark-grey background on hover */
 }
 
 /*# sourceMappingURL=base.css.map */

@@ -11,12 +11,28 @@ html body {
 h2 {
     font-size: 2rem;
     position: relative;
-    left: -30vw;
+    left: -25vw;
+}
+
+h4 {
+    font-size: 1.3rem;
+    border-bottom: 1px solid gray;
+    // width: 50vw;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto auto auto;
+
+    a{
+        font-size: 12px;
+        text-decoration: none;
+        color:rgb(99, 97, 97)
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
 }
 
 .about {
@@ -45,9 +61,16 @@ h2 {
             justify-content:space-around;
             align-items: center;
             div {
-                width: 50%;
-                padding-left: 10%;
+                width: 75%;
+                margin-left: 35%;
+                padding-left: 3%;
+                border-left: 2px solid $timeline-border;;
+                li {
+                    list-style-type: none;
+                    margin-bottom: 10px;
+                }
             }
+
         }
     }
 }
@@ -62,6 +85,7 @@ h2 {
     .skills-column {
         display: flex;
         justify-content: space-around;
+        width: $column-width;
 
         h3 {
             display: flex;
@@ -73,7 +97,8 @@ h2 {
 
         ul {
             // border-top: 2px solid rgba(0, 0, 0, 0.295);
-            width: 200px;
+            // width: 200px;
+            width: calc(30% - 5px);
             li {
                 margin-left: 20px;
             }
@@ -87,12 +112,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-weight: 200;
+    // font-weight: 200;
 
     .experience-column{
         display: flex;
         flex-direction: column;
-        width: 600px;
+        width: $column-width;
         
         .experience-timeline{
             position: relative;
@@ -102,6 +127,7 @@ h2 {
                 margin-left: 25px;
 
                 span {
+                    margin-left: 5px;
                     font-size: 14px;
                     color: $text-muted;
                 }
@@ -121,9 +147,20 @@ h2 {
                 z-index: 2;
             }
 
-            .experience-timline-body {
+            .experience-timeline-body {
+                display: flex;
+                flex-direction: row;
                 padding-left: 25px;
-                border-left: 2px solid $timeline-border
+                border-left: 2px solid $timeline-border;
+
+                div {
+                    width: 50%;
+                }
+
+                p {
+                    color: $text-muted;
+                    padding-top: 3px;
+                }
             }
             
         }
@@ -138,7 +175,7 @@ h2 {
     .education-column {
         display: flex;
         flex-direction: column;
-        width: 600px;
+        width: $column-width;
     
         .education-timeline {
             position: relative;
@@ -148,6 +185,7 @@ h2 {
                 margin-left: 25px;
 
                 span {
+                    margin-left: 5px;
                     font-size: 14px;
                     color: $text-muted;
                 }
@@ -166,17 +204,97 @@ h2 {
                 border: 0.5px solid #fff;
                 z-index: 2;
             }
-            
-            p {
+
+            .education-timeline-body {
+                display: flex;
+                flex-direction: row;
                 padding-left: 25px;
                 border-left: 2px solid $timeline-border;
+
+                div {
+                    width: 50%;
+                }
+
+                p {
+                    color: $text-muted;
+                }
             }
         }
     }   
 }
 
 .portfolio {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .portfolio-column {
+        width: $column-width;
+    }
+    
+}
+
+.reference {
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.reference-column {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.reference-column-img {
+    width: 380px;
+    height: auto;
+    border-radius: 2.5%;
+    margin-left: 30px;
+}
+
+.reference-column-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: calc(1.1rem + .6vw);
+    }
+
+    p {
+        color: $test;
+    }
+}
+
+.highlight {
+    color: $highlight;
+}
+
+.text-muted {
+    color: $text-muted;
+}
+
+
+
+
+.go-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(173, 166, 166); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  .go-to-top:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
