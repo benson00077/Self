@@ -7,12 +7,23 @@
 @import './portfolio';
 @import './reference';
 
-html body {
+@import './themes';
+@import './themeSwitcher';
+
+html body{
+    margin: 0;
+    padding: 0;
+}
+
+.content {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     font-weight: $text-weight;
-    margin: 0;
-    background-color: $background;
     overflow-x: hidden;
+    @include theme() {
+        color: theme-get('text-color');
+        background-color: theme-get('bg-color');
+    }
+
 }
 
 h2 {
@@ -23,7 +34,7 @@ h2 {
 
 h4 {
     font-size: 1.3rem;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid $border-underline;
     // width: 50vw;
 }
 
@@ -34,7 +45,9 @@ h4 {
     a{
         font-size: 12px;
         text-decoration: none;
-        color:rgb(99, 97, 97)
+        @include theme(){
+            color: theme-get('text-muted');
+        };
     }
 
     a:hover{
@@ -44,11 +57,16 @@ h4 {
 
 
 .highlight {
-    color: $highlight;
+    @include theme() {
+        color: theme-get('text-highlight')
+    }
+    
 }
 
 .text-muted {
-    color: $text-muted;
+    @include theme() {
+        color: theme-get('text-muted')
+    }
 }
 
 
@@ -57,7 +75,7 @@ footer {
     flex-direction: column;
     align-items: center;
     margin-top: 10vh;
-    color: $text-color;
+    color: $light-text-color-nav;
     background: white;
     font-size: 0.85rem;
 
@@ -70,6 +88,56 @@ footer {
 
 
 }
+
+
+
+
+.theme-switcher {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 30px;
+    width: 60px;
+    position: absolute;
+    top: 75px;
+    right: 15px;
+
+    border: 1px solid rgba(255,255,255,0);
+
+    &:focus{
+        outline: none; /* Not ideal for accessibility */
+    }
+
+    & span:nth-child(1) {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 60px;
+        height: 30px;
+        border-radius: 20px;
+        background-color: #d6d7db;
+        box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+        transition: .3s;
+    }
+
+    & span:nth-child(2) {
+        position: absolute;
+        top: 3px;
+        @include switcher(){
+            left: switcher-get('toggle-position');
+            background-color: switcher-get('bg-color');
+        }
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+        transition: .3s;
+    }
+}
+
+
+
 
 
 

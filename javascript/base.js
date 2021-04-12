@@ -1,3 +1,38 @@
+// ---Light or Dark Theme css switcher---///
+
+document.addEventListener("DOMContentLoaded", () => {
+  // initially set class="lightTheme" to body tag
+  let body = document.querySelector('#body');
+  body.classList.add("lightTheme");
+  body.classList.add("lightSwitcher")
+
+  // The button that switch dark or light theme
+  let themeSwitcher = document.querySelector('#theme-switcher');
+
+  themeSwitcher.addEventListener("click", () => {
+    let currentIsLightTheme = body.classList.contains("lightTheme")
+    
+    if (currentIsLightTheme) {
+      body.classList.remove("lightTheme")
+      body.classList.add("darkTheme")
+      body.classList.remove("lightSwitcher")
+      body.classList.add("darkSwitcher")
+    }
+    if (!currentIsLightTheme) {
+      body.classList.remove("darkTheme")
+      body.classList.add("lightTheme")
+      body.classList.remove("darkSwitcher")
+      body.classList.add("lightSwitcher")
+    }
+  })
+
+})
+
+
+
+
+// ---Go to Top Button---///
+
 function createBtn() {
     let btn = document.createElement('button');
     document.body.appendChild(btn);
@@ -23,7 +58,3 @@ function scrollFunction() {
   }
 }
 
-// function gototop() {
-//   document.body.scrollTop = 0; // For Safari
-//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-// }

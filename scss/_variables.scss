@@ -1,14 +1,27 @@
 $text-weight: 500;
 $text-weight-half: 250;
 
-$text-link: #2997ff;
-$text-color: #444;
-$background: #f8f9fa;
-$border: #ccc;
+$light-text-link: #2997ff;
+$light-text-color-nav: #444;
+$light-text-color: black;
+$light-bg: #f8f9fa;
+$light-bg-card: white;
+
+$dark-bg: #15202B;
+$dark-bg-card: #192734;
+// $dark-hover: #22303C;
+$dark-primary-text:#FFFFFF;
+$dark-secondary-text:#8899A6;
+
+
+$border-underline: gray;
 $timeline-dot: #5f8df185;
 $timeline-border: #E6E9ED;
+
 $text-muted: #757575;
 $highlight: #095aa7;
+$text-muted-dark: #8899A6;
+$highlight-dark: #298deb;
 
 $column-width: 53vw;
 $column-width-rwd: 65vw;

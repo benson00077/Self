@@ -1,0 +1,32 @@
+@import './variables';
+
+$toggle-left: 5px;
+$toggle-right: 33px;
+
+
+$themeswitcher: (
+    darkTheme: (
+        'toggle-position': $toggle-right,
+        'bg-color': $dark-bg-card
+    ),
+    lightTheme: (
+        'toggle-position': $toggle-left,
+        'bg-color': $light-bg-card
+    )
+);
+
+@mixin switcher() {
+    @each $toggle, $map in $themeswitcher {
+        $toggle-map: $map !global;
+        .#{$toggle} & {
+            @content;
+        }
+    }
+    $toggle-map: null !global;
+}
+
+@function switcher-get($key) {
+    @return map-get($toggle-map, $key);
+}
+
+

@@ -1,10 +1,15 @@
+@import './variables';
+@import './themes';
+
 .site-navigation {
     height: 65px;
     width: 100%;
-    background: white;
     display: flex;
     justify-content: space-between;
-    color: $text-color;
+    @include theme() {
+        color: theme-get('text-color-nav');
+        background: theme-get('bg-color-nav');
+    }
 
     .menu-title {
         font-size: 24px;
@@ -43,10 +48,14 @@
             text-decoration: none;
             padding: 0 20px 0 20px;
             font-size: 20px;
-            color: $text-color;
+            @include theme() {
+                color: theme-get('text-color-nav');
+            }
         
             &:hover {
-                color: $text-link;
+                @include theme() {
+                    color: theme-get('text-color-nav-hover')
+                }
             }
         }
     }
