@@ -1,0 +1,21 @@
+@import './variables';
+
+
+.portfolio {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .portfolio-column {
+        width: $column-width;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .portfolio {
+        .portfolio-column {
+            width: 80vw;
+        }
+    }
+}

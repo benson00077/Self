@@ -71,37 +71,6 @@
     left: 0px;
   }
 }
-html body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-weight: 500;
-  margin: 0;
-  background-color: #f8f9fa;
-}
-
-h2 {
-  font-size: 2rem;
-  position: relative;
-  left: -25vw;
-}
-
-h4 {
-  font-size: 1.3rem;
-  border-bottom: 1px solid gray;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto auto auto;
-}
-.container a {
-  font-size: 12px;
-  text-decoration: none;
-  color: #636161;
-}
-.container a:hover {
-  text-decoration: underline;
-}
-
 .about {
   margin: 4em 20px;
   display: flex;
@@ -138,6 +107,96 @@ h4 {
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 900px) {
+  .about .about-container {
+    flex-direction: column;
+  }
+  .about .about-container img {
+    left: 25vw;
+  }
+  .about .about-container .about-column {
+    width: 80vw;
+  }
+  .about .about-container .about-column div {
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding-left: 5%;
+  }
+}
+.site-navigation {
+  height: 65px;
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  color: #444;
+}
+.site-navigation .menu-title {
+  font-size: 24px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.site-navigation .menu-content-container {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+.site-navigation ul {
+  height: 100%;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0 20px 0 50px;
+}
+.site-navigation ul a {
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+  font-size: 20px;
+  color: #444;
+}
+.site-navigation ul a:hover {
+  color: #2997ff;
+}
+
+@media screen and (max-width: 900px) {
+  .site-navigation .menu-content-container {
+    width: 300px;
+    height: calc(100% - 65px);
+    background: white;
+    position: absolute;
+    top: 65px;
+    left: -300px;
+    transition: 300ms ease left;
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .site-navigation .menu-content-container a {
+    width: 100%;
+    padding: 0;
+  }
+  .site-navigation .menu-content-container li {
+    height: 65px;
+    display: flex;
+    align-items: center;
+  }
+  .site-navigation .menu-content-container ul {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 20px;
+  }
+  .site-navigation .menu-content-container ul, .site-navigation .menu-content-container li {
+    width: 100%;
+  }
+  .site-navigation .menu-content-container.active {
+    left: 0px;
+  }
+}
 .skills {
   margin: 4em 20px;
   display: flex;
@@ -164,6 +223,15 @@ h4 {
   margin-left: 20px;
 }
 
+@media screen and (max-width: 900px) {
+  .skills .skills-column {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills .skills-column ul {
+    width: 60vw;
+  }
+}
 .experience {
   margin: 4em 20px;
   display: flex;
@@ -215,6 +283,19 @@ h4 {
   padding-top: 3px;
 }
 
+@media screen and (max-width: 900px) {
+  .experience .experience-column {
+    width: 95vw;
+  }
+  .experience .experience-column .experience-timeline .experience-timeline-body {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  .experience .experience-column .experience-timeline .experience-timeline-body div {
+    width: 85%;
+  }
+}
 .education {
   display: flex;
   flex-direction: column;
@@ -263,6 +344,19 @@ h4 {
   color: #757575;
 }
 
+@media screen and (max-width: 900px) {
+  .education .education-column {
+    width: 95vw;
+  }
+  .education .education-column .education-timeline .education-timeline-body {
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  .education .education-column .education-timeline .education-timeline-body div {
+    width: 85%;
+  }
+}
 .portfolio {
   margin-top: 40px;
   display: flex;
@@ -273,6 +367,11 @@ h4 {
   width: 53vw;
 }
 
+@media screen and (max-width: 900px) {
+  .portfolio .portfolio-column {
+    width: 80vw;
+  }
+}
 .reference {
   margin-top: 40px;
   display: flex;
@@ -283,13 +382,14 @@ h4 {
 .reference-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 53vw;
 }
 
 .reference-column-img {
   width: 380px;
   height: auto;
   border-radius: 2.5%;
-  margin-left: 30px;
 }
 
 .reference-column-body {
@@ -300,8 +400,50 @@ h4 {
 .reference-column-body h3 {
   font-size: calc(1.1rem + .6vw);
 }
-.reference-column-body p {
-  color: #4f4f4f;
+.reference-column-body div {
+  width: 90%;
+}
+
+@media screen and (max-width: 900px) {
+  .reference-column {
+    width: 80vw;
+  }
+
+  .reference-column-img {
+    width: 300px;
+    height: auto;
+    margin-left: 0;
+  }
+}
+html body {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 500;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  font-size: 2rem;
+  position: relative;
+  left: -25vw;
+}
+
+h4 {
+  font-size: 1.3rem;
+  border-bottom: 1px solid gray;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto auto auto;
+}
+.container a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #636161;
+}
+.container a:hover {
+  text-decoration: underline;
 }
 
 .highlight {
@@ -310,6 +452,22 @@ h4 {
 
 .text-muted {
   color: #757575;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+  color: #444;
+  background: white;
+  font-size: 0.85rem;
+}
+footer div {
+  padding: 15px 0 5px 0;
+}
+footer div img {
+  width: 23px;
 }
 
 .go-to-top {

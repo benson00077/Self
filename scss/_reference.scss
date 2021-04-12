@@ -1,0 +1,51 @@
+@import './variables';
+
+
+.reference {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reference-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: $column-width;
+
+}
+
+.reference-column-img {
+    width: 380px;
+    height: auto;
+    border-radius: 2.5%;
+}
+
+.reference-column-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: calc(1.1rem + .6vw);
+    }
+
+    div {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    
+    .reference-column {
+        width: 80vw;
+    }
+
+    .reference-column-img {
+        width: 300px;
+        height: auto;
+        margin-left: 0;
+    }
+}
