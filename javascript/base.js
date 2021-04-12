@@ -29,6 +29,19 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
+//--- icon-menu active-or-not UI---//
+// expand menu when in samll screen size
+// collaspe the expanded munu wehn click outside the menu
+const menu_container = document.querySelector('.menu-content-container')
+
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains('icon-menu')) {
+    menu_container.classList.add("menu-active")
+  } else {
+    menu_container.classList.remove("menu-active")
+  };
+
+})
 
 
 // ---Go to Top Button---///

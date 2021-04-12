@@ -25,13 +25,13 @@
         padding-right: 30px;
     }
 
-    // .ion-ios-menu {
-    //     font-size: 36px;
-    //     width: 65px;
-    //     align-items: center;
-    //     cursor: pointer;
-    //     display: none;
-    // }
+    .icon-menu {
+        margin-right: 15px;
+        width: 40px;
+        align-items: center;
+        cursor: pointer;
+        display: none;
+    }
 
 
     ul {
@@ -74,6 +74,7 @@
             transition: 300ms ease left;
             flex-direction: column-reverse;
             padding: 0;
+            z-index: 10;
 
             a {
                 width: 100%;
@@ -97,14 +98,15 @@
             }
     
 
-            &.active {
+            &.menu-active {
                 left: 0px;
             }
         
         }
 
-        // .ion-ios-menu {
-        //     display: flex;
-        // }
+        .icon-menu {
+            display: flex;
+        }
+
     }
 }
