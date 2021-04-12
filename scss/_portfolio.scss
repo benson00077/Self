@@ -2,12 +2,21 @@
 
 
 .portfolio {
+    // font-weight: $text-weight-half;
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     .portfolio-column {
         width: $column-width;
+
+        p {
+            padding-bottom: 10px;
+        }
+
+        ul li {
+            padding-bottom: 10px;
+        }
     }
     
 }
@@ -15,7 +24,7 @@
 @media screen and (max-width: 900px) {
     .portfolio {
         .portfolio-column {
-            width: 80vw;
+            width: $column-width-rwd-bigger;
         }
     }
 }

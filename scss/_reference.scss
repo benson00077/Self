@@ -8,12 +8,19 @@
     align-items: center;
 }
 
-.reference-column {
+.reference-columns{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: $column-width;
+}
 
+.reference-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid gray;
+    padding-top: 5vh;
 }
 
 .reference-column-img {
@@ -39,7 +46,7 @@
 
 @media screen and (max-width: 900px) {
     
-    .reference-column {
+    .reference-columns {
         width: 80vw;
     }
 

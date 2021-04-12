@@ -1,4 +1,8 @@
 
+# My Korean portfolio
+published [here](https://benson00077.github.io/Self/) by gitpage.
+
+
 
 ### SCSS setting
 - Install globally `npm install sass -g`

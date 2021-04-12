@@ -31,9 +31,13 @@
                 margin-left: 35%;
                 padding-left: 3%;
                 border-left: 2px solid $timeline-border;;
-                li {
+                ul {
+                    margin-left: -40px;
+                    li {
+                    font-weight: $text-weight-half;
                     list-style-type: none;
                     margin-bottom: 10px;
+                    }
                 }
             }
 
@@ -48,7 +52,7 @@
             flex-direction: column;
 
             img {
-                left: 25vw;
+                left: 17vw;
             }
 
             .about-column {
@@ -57,7 +61,7 @@
                     width: 100%;
                     margin-top: 10%;
                     margin-left: 10%;
-                    padding-left: 5%;
+                    padding-left: 5%;                
                 }
             }
         }

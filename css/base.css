@@ -102,7 +102,11 @@
   padding-left: 3%;
   border-left: 2px solid #E6E9ED;
 }
-.about .about-container .about-column div li {
+.about .about-container .about-column div ul {
+  margin-left: -40px;
+}
+.about .about-container .about-column div ul li {
+  font-weight: 250;
   list-style-type: none;
   margin-bottom: 10px;
 }
@@ -112,7 +116,7 @@
     flex-direction: column;
   }
   .about .about-container img {
-    left: 25vw;
+    left: 17vw;
   }
   .about .about-container .about-column {
     width: 80vw;
@@ -285,7 +289,10 @@
 
 @media screen and (max-width: 900px) {
   .experience .experience-column {
-    width: 95vw;
+    width: 65vw;
+  }
+  .experience .experience-column .experience-timeline {
+    left: 0px;
   }
   .experience .experience-column .experience-timeline .experience-timeline-body {
     flex-direction: column;
@@ -293,7 +300,10 @@
     padding-left: 0;
   }
   .experience .experience-column .experience-timeline .experience-timeline-body div {
-    width: 85%;
+    width: 90%;
+  }
+  .experience .experience-column .experience-timeline .experience-timeline-body div ul {
+    margin-left: -18px;
   }
 }
 .education {
@@ -346,7 +356,10 @@
 
 @media screen and (max-width: 900px) {
   .education .education-column {
-    width: 95vw;
+    width: 65vw;
+  }
+  .education .education-column .education-timeline {
+    left: 0px;
   }
   .education .education-column .education-timeline .education-timeline-body {
     flex-direction: column;
@@ -354,7 +367,10 @@
     padding-left: 0;
   }
   .education .education-column .education-timeline .education-timeline-body div {
-    width: 85%;
+    width: 90%;
+  }
+  .education .education-column .education-timeline .education-timeline-body div ul {
+    margin-left: -18px;
   }
 }
 .portfolio {
@@ -365,6 +381,12 @@
 }
 .portfolio .portfolio-column {
   width: 53vw;
+}
+.portfolio .portfolio-column p {
+  padding-bottom: 10px;
+}
+.portfolio .portfolio-column ul li {
+  padding-bottom: 10px;
 }
 
 @media screen and (max-width: 900px) {
@@ -379,11 +401,19 @@
   align-items: center;
 }
 
-.reference-column {
+.reference-columns {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 53vw;
+}
+
+.reference-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid gray;
+  padding-top: 5vh;
 }
 
 .reference-column-img {
@@ -405,7 +435,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .reference-column {
+  .reference-columns {
     width: 80vw;
   }
 
@@ -420,6 +450,7 @@ html body {
   font-weight: 500;
   margin: 0;
   background-color: #f8f9fa;
+  overflow-x: hidden;
 }
 
 h2 {

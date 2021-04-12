@@ -9,9 +9,10 @@
 
 html body {
     font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    font-weight: 500;
+    font-weight: $text-weight;
     margin: 0;
     background-color: $background;
+    overflow-x: hidden;
 }
 
 h2 {
