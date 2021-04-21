@@ -8,8 +8,8 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 ### SCSS setting
 - Install globally `npm install sass -g`
 - Install in project `npm install sass --save`
-- Compile sass to css file `sass ./scss/base.scss ./css/scss`
-- Compile automatically `sass --watch ./scss/base.scss ./css/scss`
+- Compile sass to css file `sass ./scss/base.scss ./css/base.css`
+- Compile automatically `sass --watch ./scss/base.scss ./css/base.css`
 
 
 ### Dark / Light Theme Switcher
@@ -24,4 +24,31 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 - Solution: host a webserver instaed of opening local html file
   - In terminal, `cd /path/to/mydir` (path of that local html file)
   - `python -m http.server` with python3 
+  - Now try on URL `http://localhost:8000/index.html` 
+  - Problem: `cache` didn't removed and thus make debug unfriendly.
+
+### Problem Shooting: Cache when localhost test
+- [Solution Further](https://stackoverflow.com/questions/42341039/remove-cache-in-a-python-http-server):
+  - Since `http.server` does not send "no cache" header, so we need to send "no cache" header
+    ```python
+    # NoCacheHTTPServer.py
+    import http.server
+
+    PORT = 8000
+
+    class NoCacheHTTPRequestHandler(
+        http.server.SimpleHTTPRequestHandler
+    ):
+        def send_response_only(self, code, message=None):
+            super().send_response_only(code, message)
+            self.send_header('Cache-Control', 'no-store, must-revalidate')
+            self.send_header('Expires', '0')
+
+    if __name__ == '__main__':
+        http.server.test(
+            HandlerClass=NoCacheHTTPRequestHandler,
+            port=PORT
+        )
+    ```
+  - Run in CLI: `python NoCacheHTTPServer.py` in your testing index.html directory.
   - Now try on URL `http://localhost:8000/index.html` 
