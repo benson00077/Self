@@ -50,51 +50,48 @@ const render_container = (data) => {
     <img src="./asset/bensontuan.png" alt="bensonTuan">
     <div class="about-column">
         <div>
-            <h3>段秉燊 Benson Tuan</h3>
+            <h3>${data.about.name.title}段秉燊 Benson Tuan</h3>
             <ul>
-                <li>${data.main.phone} 삼성물산·애플 부품공급사에서 B2B해외영업(PM) 1년 경험</li>
-                <li>퇴사후 몇개월동안 번역하면서 컴퓨터기술을 배우고 있습니다</li>
-                <li>컴퓨터기술·한국어·한중번역·게임 애호자</li>
+                <li>${data.about.name.description1}</li>
+                <li>${data.about.name.description2}</li>
+                <li>${data.about.name.description3}</li>
             </ul>
         </div>
 
         <div>
-            <h3>인적사항</h3>
+            <h3>${data.about.bio.title}</h3>
             <ul>
-                <li>1995/8/19 27살</li>
-                <li>benson50622@gmail.com</li>
-                <li>(+886)922-921-566</li>
+                <li>${data.about.bio.birth}</li>
+                <li>${data.about.bio.email}</li>
+                <li>${data.about.bio.phone}</li>
             </ul>
-            <!-- <p>1995/8/19 27살</p>
-            <p>benson50622@gmail.com</p>
-            <p>(+886)922-921-566</p> -->
         </div>
     </div>
 </div>
 </div>
 
 <div class="skills" id="skills">
-<h2>보유기술</h2>
+<h2>${data.skills.title}</h2>
 <div class="skills-column">
     <ul>
-        <h3>언어능력</h3>
-        <li>중국어 - 원어민</li>
-        <li>한국어 - 토픽6급</li>
-        <li>한중 번·통역</li>
+        <h3>${data.skills.content[0].catagory}</h3>
+        <li>${data.skills.content[0].list[0]}</li>
+        <li>${data.skills.content[0].list[1]}</li>
+        <li>${data.skills.content[0].list[2]}</li>
     </ul>
     <ul>
-        <h3>프로젝트 관리</h3>
-        <li>일정 계획수립 및 진척관리</li>
-        <li>협업부서 커뮤니케이션</li>
-        <li>거래처 요구분석 및 업무협의</li>
-        <li>거래처 대접 및 소통</li>
+        <h3>${data.skills.content[1].catagory}</h3>
+        <li>${data.skills.content[1].list[0]}</li>
+        <li>${data.skills.content[1].list[1]}</li>
+        <li>${data.skills.content[1].list[2]}</li>
+        <li>${data.skills.content[1].list[3]}</li>
     </ul>
     <ul>
-        <h3>기타</h3>
-        <li>HTML5, CSS3 (SCSS), JavaScript (ES6)</li>
-        <li>React.js</li>
-        <li>Python + SQL</li>
-        <li>Git, Github</li>
+        <h3>${data.skills.content[2].catagory}</h3>
+        <li>${data.skills.content[2].list[0]}</li>
+        <li>${data.skills.content[2].list[1]}</li>
+        <li>${data.skills.content[2].list[2]}</li>
+        <li>${data.skills.content[2].list[3]}</li>
     </ul>
 </div>
 </div>

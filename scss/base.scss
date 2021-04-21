@@ -9,6 +9,7 @@
 
 @import './themes';
 @import './themeSwitcher';
+@import './resume-switcher';
 
 html body{
     margin: 0;
@@ -37,6 +38,11 @@ h4 {
     border-bottom: 1px solid $border-underline;
     // width: 50vw;
 }
+
+p, li {
+    line-height: 1.5;
+}
+
 
 .container {
     max-width: 1200px;

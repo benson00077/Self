@@ -1,3 +1,18 @@
+
+// ---Change Resume(translate) Button---///
+// When the user scrolls down 20px from the top of the document, show the button
+const btn_resume_change = document.querySelector('#resume-switcher');
+
+window.addEventListener('scroll', scrollFunction2)
+
+function scrollFunction2() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    btn_resume_change.style.display = "block";
+  } else {
+    btn_resume_change.style.display = "none";
+  }
+}
+
 // ---Light or Dark Theme css switcher---///
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -45,15 +60,9 @@ document.addEventListener("click", (e) => {
 
 
 // ---Go to Top Button---///
-
-function createBtn() {
-    let btn = document.createElement('button');
-    document.body.appendChild(btn);
-}
-
 // When the user clicks on the button, scroll to the top of the document
-const button = document.querySelector('.go-to-top');
-button.addEventListener('click', () => window.scrollTo({
+const btn_gotop = document.querySelector('.go-to-top');
+btn_gotop.addEventListener('click', () => window.scrollTo({
     top: 0,
     behavior: 'smooth',
   }));
@@ -61,13 +70,13 @@ button.addEventListener('click', () => window.scrollTo({
 
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.addEventListener('scroll', scrollFunction)
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    button.style.display = "block";
+    btn_gotop.style.display = "block";
   } else {
-    button.style.display = "none";
+    btn_gotop.style.display = "none";
   }
 }
 
