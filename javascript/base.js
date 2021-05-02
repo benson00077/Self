@@ -1,5 +1,5 @@
 
-// ---Change Resume(translate) Button---///
+// ---Resume json switcher's UI---///
 // When the user scrolls down 20px from the top of the document, show the button
 const btn_resume_change = document.querySelector('#resume-switcher');
 

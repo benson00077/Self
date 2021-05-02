@@ -132,7 +132,7 @@
   margin-left: -40px;
 }
 .about .about-container .about-column div ul li {
-  font-weight: 250;
+  font-weight: 400;
   list-style-type: none;
   margin-bottom: 10px;
 }
@@ -434,10 +434,10 @@
   width: 53vw;
 }
 .portfolio .portfolio-column p {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 .portfolio .portfolio-column ul li {
-  padding-bottom: 10px;
+  padding-bottom: 0px;
 }
 
 @media screen and (max-width: 900px) {

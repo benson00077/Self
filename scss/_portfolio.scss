@@ -9,13 +9,15 @@
     align-items: center;
     .portfolio-column {
         width: $column-width;
+        // border-left: 2px solid $timeline-border;
+        // padding-left: 20px;
 
         p {
-            padding-bottom: 10px;
+            padding-bottom: 0px;
         }
 
         ul li {
-            padding-bottom: 10px;
+            padding-bottom: 0px;
         }
     }
     

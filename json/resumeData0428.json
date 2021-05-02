@@ -1,0 +1,122 @@
+{
+  "about": {
+    "name": {
+    "title": "Benson Tuan (段秉燊)",
+    "description1": "B2B oversea sales 1 year experience",
+    "description2": "TOPIK level 6 <a href='#reference-topik'>[→ ref]</a>",
+    "description3": "code / Korean / translation Learner"
+    },
+    "bio": {
+      "title": "Profile",
+      "birth": "1995/8/19 26y",
+      "email": "benson50622@gmail.com <a href='mailto:benson50622@gmail.com'>[→ mail2me]</a>",
+      "phone": "(+886)922-921-566"
+    }
+  },
+
+  "skills": {
+      "title": "Skills",
+      "content": [
+        {
+          "catagory": "Language",
+          "list": [
+            "English - TOEIC 800", "Korean - TOPIK 6", "Korean-Chinese translation"
+          ]
+        },
+        {
+          "catagory": "PM",
+          "list": [
+            "Project Management tools (Trello)", "MS Office / Mac", "Planning", "Public Speaking"
+          ]
+        },
+        {
+          "catagory": "Others",
+          "list": [
+            "HTML5, CSS3 (SCSS), JavaScript (ES6)", "React.js", "Python + SQL", "Git, Github"
+          ]
+        }
+      ]
+    },
+
+  "experience" : {
+    "title": "Employment",
+    "content": [
+      {
+        "job": "International Sales (PM) ",
+        "job_time": "2019.08 - 2020.08",
+        "job_description": "@ Pioneer Material Precision Tech, Inc. (Taipei) <br> Provider of Elastomer (and it's combination of dissimilar materials) components" ,
+        "job_detail_list": [
+          "Schedule Management(proto to ramp build)",
+          "Quotation & cost breakdown external reporting",
+          "FATP complaint handling @Vietnam",
+          "Product & technology solution presentation @Korea"
+        ]
+      },
+      {
+        "job": "Administrative Assistant",
+        "job_time": "2018.09 - 2019.01",
+        "job_description": "@ (주)URG (South Korea, part-time) <br> cosmetic company",
+        "job_detail_list": [
+          "Marketing documents translation",
+          "China agency meeting interpretor"
+        ]
+      }
+    ]
+  },
+
+  "education" : {
+    "title": "Education",
+    "content": [
+      {
+        "school": "National Chenchi University, Korean Major",
+        "school_time": "2014-2019",
+        "school_description": "part-time job included:" ,
+        "school_detail_list": [
+          "Promotion event DRI·Intepretor, held by Dongandong Agricultural Cooperative",
+          "Survey interviewer @ Taoyuan airport ",
+          "Interpreter in K-Beauty Expo @ Taipei World Trade Center"
+        ]
+      },
+      {
+        "school": "Seoul Konkuk University, Exchange student",
+        "school_time": "2018-2019",
+        "school_description": "part-time job included:" ,
+        "school_detail_list": [
+          "Translator intern nearby @ Seoul 양재 station"
+        ]
+      }
+    ]
+  },
+  "portfolio" : {
+    "title": "Portfolio",
+    "content": [
+      "<p> &ensp;&ensp; With more than 1 year of extensive experience of working as an B2B International Sales, I have a <span class='highlight'> customer-focused approach to work and a strong drive to see things through to completion. </span> </p>",
+      "<p> &ensp;&ensp; In my previous job at Pioneer Material Precision Tech, Inc., I was in charge of working on the smooth development of OEM products, from prototype to ramp up & MP build, communicating with both internal and external to make sure the consolidated information and acceptable schedule planning. There, I was adaptable and managed to <span class='highlight'> drive our team to catch up with Korean end customer's fast-paced business culture </span>, succeeded in transiting project's prototype build to ramp build in 4 months. </p>",
+      "<p> &ensp;&ensp; Also, I am the Chenchi University graduate with a bachelor’s degree in Korean. During the time, I intentionally immersed myself in a Korean-speaking environment through many customer-centric part-time jobs and 1 year exchange student experience at Seoul. <span class='highlight'> Offering the authentic Korean speaking skills and the deep insight of Korea culture, I am possessing persuasion skills and the crucial ability to work with Korean. </span> </p>", 
+      "<p> &ensp;&ensp; I’m excited to parlay my experience to a more challenging position. Thanks for your time and consideration. I look forward to speaking with you in the near future.</p>",
+      ""
+    ]
+  },
+
+  "reference": {
+    "title": "Reference",
+    "content": [
+      {
+        "item": "Personal project <br> K-drama Korean-larning Platform",
+        "item_note": "Back-end: RESTful-API with Python + PostgreSQL <br> Front-end: SPA with React.js",
+        "item_description":  "Search by Kreaon Verb·Adjective, <br> get related K-drama lines with Chinese & English translation! <br> Established for Korean & Translation Learning, non-profit purpose."
+      },
+      {
+        "item": "National Chenchi Uni. Diploma",
+        "item_note": " ",
+        "item_description":  " "
+      },
+      {
+        "item": "TOPIK - level 6",
+        "item_note": "Test of Proficiency in Korean",
+        "item_description":  "Scored 98 both in Reading and Listening test."
+      }
+    ]
+  }
+
+}
