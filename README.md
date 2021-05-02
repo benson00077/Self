@@ -3,6 +3,10 @@
 published [here](https://benson00077.github.io/Self/) by gitpage.
 
 
+## Building log
+- Inplemented with json and made this project a templat
+- v1 for Korean, v2 for En/Zh in local repositories.
+
 
 ## Notes when building this program
 ### SCSS setting
