@@ -4,9 +4,10 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 
 
 ## Building log
-- Inplemented with json and made this project a templat
-- v1 for Korean(non-template)
-- v2 for En/Zh (template), json file served by otehr gipage respository
+| Version | Implementation | Content changed
+| ------ | ------ | ------ |
+|v1| - | Korean hard coded content
+|v2| make it a template <br/> json file served by other gitpage respository | En/Zh
 
 
 ## Notes when building this program
@@ -23,9 +24,9 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 
 
 ### Problem Shooting: CROS problem
-- Happened when I try to make this program a template instead of hard code html text, by using JavaScript importing other js/json files.
-- Also hanppend when using fetch API for json
-- [File protocal != https  protocal](https://stackoverflow.com/questions/8456538/origin-null-is-not-allowed-by-access-control-allow-origin)
+- Happened when I try to make this program a template instead of hard code html text, by using JavaScript importing other js/json files (perely opne indtx.html file with broser)
+- Also hanppend when using JavaScript fetch API for json
+- Problem arroused because [File protocal != https  protocal](https://stackoverflow.com/questions/8456538/origin-null-is-not-allowed-by-access-control-allow-origin)
 - Solution: host a webserver instaed of opening local html file
   - In terminal, `cd /path/to/mydir` (path of that local html file)
   - `python -m http.server` with python3 
