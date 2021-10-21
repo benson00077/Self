@@ -10,16 +10,15 @@ figure {
   position: fixed;
   top: 0;
   transition: all 1s;
-  
-  
-  img {
-    border-radius: 65px;
-    //background-color:rgba(190, 185, 185, 0.3);
-    height: 95vh;
-    //background-image: linear-gradient(rgba(0,0,255,0.5), rgba(255, 255, 0, 0.5));
-    //transition: all 0.5s ease-out;    
-    
-  }
+}
+
+figure.animation { // by js
+  transform: translateY(-300px) scale(0.8);
+  //transform: scale(1.5);
+}
+
+figure.animation-rotate {
+  transform: translateY(-200px) scale(0.5) $mobile-rotate3d;
 }
 
 
@@ -27,13 +26,14 @@ figure {
   transform: scale(1);
   opacity: 1;
   box-shadow: 0 0 2rem 1rem rgba(black, .1);
+  z-index: $z-index-mobile-body;
 
 
   position: relative;
   flex-shrink: 0;
-  width: 35.6rem;
-  height: 72.2rem;
-  border-radius: 6rem;
+  height: $mobile-height;
+  width: $mobile-width;
+  border-radius: $mobile-border-radius;
   display: flex;
   justify-content: center;
   //background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/830072/bg-1.jpg");

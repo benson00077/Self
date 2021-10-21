@@ -2,10 +2,10 @@
 
 
 let json_source_state = { state: 'json_source' }
-let json_source = '../json/resumeData20211015.json'    // for local test
-let json_source2 = '../json/resumeData20211015_2.json' // for local test
-// let json_source = 'https://benson00077.github.io/Self_api/json/resumeData0428.json'    // for gitpage launch
-// let json_source2 = 'https://benson00077.github.io/Self_api/json/resumeData0428_2.json' // for gitpage launch
+// let json_source = '../json/resumeData20211015.json'    // for local test
+// let json_source2 = '../json/resumeData20211015_2.json' // for local test
+let json_source = 'https://benson00077.github.io/Self_api/json/resumeData0428.json'    // for gitpage launch
+let json_source2 = 'https://benson00077.github.io/Self_api/json/resumeData0428_2.json' // for gitpage launch
 
 
 // ---Resume json switcher's logic---///

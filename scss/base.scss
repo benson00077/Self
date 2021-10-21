@@ -1,7 +1,7 @@
 @import './_variables';
 @import './_navigation';
 @import './mobile';
-@import './mobile-slide';
+@import './mobile-content';
 @import './content';
 
 @import './container';
@@ -20,11 +20,12 @@ html body{
     margin: 0;
     padding: 0;
     min-height: 1000vh;  // 
+    //background-image: url("/asset/yellobulb.jpg");
     //background-image: linear-gradient(rgba(39,27,148,0.5), rgba(236, 195, 107, 0.5));
-    //background-image: url("/asset/dusk.jpg");
-    // background-size: 100vw 100vh;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
+    background-image: url("/asset/dusk.jpg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
@@ -86,6 +87,8 @@ footer {
 
 
 
+
+/* btns */
 
 .theme-switcher {
     background: 0;

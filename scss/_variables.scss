@@ -28,5 +28,24 @@ $column-width-rwd: 65vw;
 $column-width-rwd-bigger: 80vw;
 
 
-$unlock-bg-color: #5fadbf;
-$slide-text-msg-color: rgba(50, 168, 82, 0.5);
+/* navigation */
+$navi-hover-clr: #5272cc;
+$navi-indicator-clr: #8fa5e2;
+
+
+/* for mobile */
+$mobile-height: 72.2rem;
+$mobile-width: 35.6rem;
+$mobile-border-radius: 6rem;
+
+$mobile-rotate3d: rotate3d(1, 1, 1, -0.2turn);
+$mobile-retate3d-reverse: rotate3d(-1, 1, 1, 0.2turn);
+
+
+$z-index-mobile-body: 100;
+$z-index-mobile-unlock: 50;
+$z-index-mobile-content: 10;
+$z-index-mobile-bg: 5;
+$z-index-bg: 1;
+
+$mobile-text-msg-color: rgba(50, 168, 82, 0.5);
