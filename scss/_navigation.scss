@@ -1,7 +1,7 @@
 @import './variables';
 @import './themes';
 
-.site-navigation {
+.header {
     height: 65px;
     width: 100%;
     display: flex;
@@ -19,94 +19,110 @@
         margin-left: 30px;
     }
 
-    .menu-content-container {
+    nav {
         display: flex;
         align-items: center;
         padding-right: 30px;
     }
 
-    .icon-menu {
+    .icon-menu { // for small screen
         margin-right: 15px;
         width: 40px;
         align-items: center;
         cursor: pointer;
         display: none;
     }
+}
 
+a.nav-link {
+    text-decoration: none;
+    padding: 0 20px 0 20px;
+    font-size: 20px;
 
-    ul {
-        height: 100%;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        padding-inline-start: 0;
-        display: flex;
-        align-items: center;
-        list-style-type: none;
-        padding: 0 20px 0 50px;
+    transition: .3s;
+    position: relative;
 
-        a {
-            text-decoration: none;
-            padding: 0 20px 0 20px;
-            font-size: 20px;
-            @include theme() {
-                color: theme-get('text-color-nav');
-            }
-        
-            &:hover {
-                @include theme() {
-                    color: theme-get('text-color-nav-hover')
-                }
-            }
-        }
+    @include theme() {
+        color: theme-get('text-color-nav');
     }
 
+    &:before {
+      z-index: 20;
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #003ad8;
+      border-radius: 8px 8px 0 0;
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &:not(.is-active):hover:before {
+      opacity: 1;
+      bottom: 0;
+    }
+    
+    &:not(.is-active):hover { 
+      @include theme() {
+        color: theme-get('text-color-nav-hover')
+      }
+    }
+}
+
+    
+.nav-indicator {
+  position: absolute;
+  // left: 0;
+  // bottom: 0;
+  height: 4px;
+  transition: .4s;
+  height: 5px;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
 }
 
 @media screen and (max-width: 900px) {
-    .site-navigation {
-        .menu-content-container{
-            width: 300px;
-            height: calc(100% - 65px);
+    .header {
+        nav{
+            width: 30vw;
+            height: calc(100vh - 65px);
             background: white;
             position: absolute;
             top: 65px;
             left: -300px;
             transition: 300ms ease left;
-            flex-direction: column-reverse;
+            flex-direction: column;
+            justify-content: start;
             padding: 0;
             z-index: 10;
+
+            display: flex;
+            align-items: center;
 
             a {
                 width: 100%;
                 padding: 0;
-            }
 
-            li {
                 height: 65px;
                 display: flex;
                 align-items: center;
             }
 
-            ul {
-                flex-direction: column;
-                padding: 0;
-                padding-top: 20px;
-            }
-
-            ul, li {
-                width: 100%;
-            }
-    
-
             &.menu-active {
                 left: 0px;
             }
-        
         }
 
         .icon-menu {
+            z-index: 100;
             display: flex;
         }
 
+    }
+    .nav-indicator{
+      display: none;
     }
 }

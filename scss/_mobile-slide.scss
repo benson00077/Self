@@ -1,0 +1,124 @@
+@import './_variables';
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+.image-content {
+  width: 89%;
+  position: absolute;
+  top: 12%;
+  left: 5.5%;
+  z-index: -100;
+  
+
+
+  .image-content-unlock {
+    border-radius: 65px;
+    position: absolute;
+    left: -1%;
+    height: 93vh;
+    width: 100%;
+    background-color: $unlock-bg-color;
+    transition: all 0.4s ease-in;
+    top: -20%;
+
+
+    &:not(.locked){
+      opacity: 0;
+      height: 0;
+    }
+
+    & div {
+      position: absolute;
+      top: 53%;
+      left: 10%;
+      color: $light-text-link;
+    }
+    & .image-content-unlock-caption {
+      position: absolute;
+      top: 45%;
+      left: 1%;
+      color: $light-text-link;
+      // for keyframe //
+      width: 12ch;
+      animation: typing 2s steps(22), blink .5s step-end infinite alternate; 
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-family: monospace;
+      font-size: 2em;
+    }
+  }
+
+  .image-content-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 2px solid $border-underline;
+    
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+
+  .image-content-message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      display: inline-block;  // inline-block could avoid p tag expanding to the width of their containers
+      transition: all 0.5s ease-out;
+      opacity: 1;
+      height: auto;
+      // Glassmorphism //
+      background: $slide-text-msg-color;
+      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+      backdrop-filter: blur( 4px );
+      -webkit-backdrop-filter: blur( 4px );
+      border-radius: 10px;
+      border: 1px solid rgba( 255, 255, 255, 0.18 );
+      
+      &:not(.is-active) {
+        opacity: 0;
+        height: 0;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        width: 10%;
+        height: 5px;;
+        background-color: #003ad8;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+// .testing {
+//   position: fixed;
+//   transform: translatex(500px);
+//   transition: all 2s;
+//   z-index: 20;
+// }
+
+// .testing2 {
+//   position: fixed;
+//   transform: translatex(0);
+//   transition: all 2s;
+//   z-index: 20;
+// }

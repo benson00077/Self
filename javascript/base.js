@@ -1,12 +1,16 @@
 
+// var for multiple functoin
+const right_side_content = document.querySelector('.right-side-fixed');
+
+
 // ---Resume json switcher's UI---///
 // When the user scrolls down 20px from the top of the document, show the button
 const btn_resume_change = document.querySelector('#resume-switcher');
 
-window.addEventListener('scroll', scrollFunction2)
+right_side_content.addEventListener('scroll', scrollFunction2)
 
 function scrollFunction2() {
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+  if (right_side_content.scrollTop > 100) { 
     btn_resume_change.style.display = "block";
   } else {
     btn_resume_change.style.display = "none";
@@ -47,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //--- icon-menu active-or-not UI---//
 // expand menu when in samll screen size
 // collaspe the expanded munu wehn click outside the menu
-const menu_container = document.querySelector('.menu-content-container')
+const menu_container = document.querySelector('nav')
 
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains('icon-menu')) {
@@ -61,8 +65,8 @@ document.addEventListener("click", (e) => {
 
 // ---Go to Top Button---///
 // When the user clicks on the button, scroll to the top of the document
-const btn_gotop = document.querySelector('.go-to-top');
-btn_gotop.addEventListener('click', () => window.scrollTo({
+const btn_gotop = document.querySelector('#go-to-top');
+btn_gotop.addEventListener('click', () => right_side_content.scrollTo({
     top: 0,
     behavior: 'smooth',
   }));
@@ -70,13 +74,12 @@ btn_gotop.addEventListener('click', () => window.scrollTo({
 
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.addEventListener('scroll', scrollFunction)
+right_side_content.addEventListener('scroll', scrollFunction)
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (right_side_content.scrollTop > 20) {
     btn_gotop.style.display = "block";
   } else {
     btn_gotop.style.display = "none";
   }
 }
-
