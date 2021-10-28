@@ -34,6 +34,7 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 |v1| - | Korean hard coded content
 |v2| make it a template <br/> json file served by other gitpage respository | En/Zh
 |v3| add animation | |
+|v4| import webpack | | 
 
 
 # Init / env

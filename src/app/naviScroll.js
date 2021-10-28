@@ -55,8 +55,8 @@ function navIndicator(el) {
 }
 
 function clickHandlerAnchorsSmoothScroll(event, respond = null) {
-  const left_side_fixed = document.querySelector('.right-side-fixed')
-  if (!left_side_fixed) return console.error("left_side_fixed not found. Should fix logic of scroll Anchor")
+  const right_side_fixed = document.querySelector('.right-side-fixed')
+  if (!right_side_fixed) return console.error("right_side_fixed not found. Should fix logic of scroll Anchor")
   
   const distanceToTop = el => Math.floor(el.getBoundingClientRect().top)
   event.preventDefault()
@@ -68,7 +68,7 @@ function clickHandlerAnchorsSmoothScroll(event, respond = null) {
   if (!targetAnchor) return console.error("targetAnchor not found. argvs passed into clickHandlerAnchorsSmoothScroll should be a tag?")
   const originalTop = distanceToTop(targetAnchor)
 
-  left_side_fixed.scrollBy({ top: originalTop - _navHeight, left: 0, behavior: 'smooth' })
+  right_side_fixed.scrollBy({ top: originalTop - _navHeight, left: 0, behavior: 'smooth' })
 }
 
 function main() {
