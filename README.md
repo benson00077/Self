@@ -10,7 +10,7 @@
   - [Navigation Bar 懸浮兩個方法](#navigation-bar-懸浮兩個方法)
   - [處理 display 消失 vs 出現](#處理-display-消失-vs-出現)
   - [CSS 效能 : Repaint & Reflow](#css-效能--repaint--reflow)
-  - [Unit: rem](#unit-rem)
+  - [CSS unit: rem](#css-unit-rem)
 - [JavaScript notes](#javascript-notes)
   - [Javascript Multiple Event Listener, OR integrated into one Event Listenr?](#javascript-multiple-event-listener-or-integrated-into-one-event-listenr)
   - [Scrolling event api](#scrolling-event-api)
@@ -35,6 +35,7 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 |v2| make it a template <br/> json file served by other gitpage respository | En/Zh
 |v3| add animation | |
 |v4| import webpack | | 
+|v5| Refactoring js code by oop | |
 
 
 # Init / env
@@ -103,8 +104,8 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 ## CSS 效能 : Repaint & Reflow
 - 解答了為何 JS 替換 class name 或修改 cssText較好，而不是逐個設定 style 屬性 [more](https://ithelp.ithome.com.tw/articles/10217427)
 
-## Unit: rem
-- which come in useful when doing RWD
+## CSS unit: rem
+- which comes in handing when doing RWD
 - compared to vh, vw
 
 # JavaScript notes
