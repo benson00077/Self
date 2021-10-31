@@ -16,7 +16,7 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({filename: "[name].[contenthash].css"}),
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-      publicPath: "." // w/ git repo name for gitpage
+      publicPath: "." // for gitpage
     })
   ],
   module: {
