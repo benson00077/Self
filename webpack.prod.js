@@ -2,6 +2,7 @@ const path = require("path")
 const common = require("./webpack.common")
 const { merge } = require("webpack-merge")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = merge(common, {
   mode: "production",
@@ -12,7 +13,11 @@ module.exports = merge(common, {
     clean: true
   },
   plugins: [
-    new MiniCssExtractPlugin({filename: "[name].[contenthash].css"})
+    new MiniCssExtractPlugin({filename: "[name].[contenthash].css"}),
+    new HtmlWebpackPlugin({
+      template: "./src/template.html",
+      publicPath: "Self" // w/ git repo name for gitpage
+    })
   ],
   module: {
     rules: [

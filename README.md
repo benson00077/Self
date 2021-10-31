@@ -35,7 +35,7 @@ published [here](https://benson00077.github.io/Self/) by gitpage.
 |v2| make it a template <br/> json file served by other gitpage respository | En/Zh
 |v3| add animation | |
 |v4| import webpack | | 
-|v5| Refactoring js code by oop | |
+|v5| Refactoring js to oop | |
 
 
 # Init / env
