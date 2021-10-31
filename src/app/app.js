@@ -31,10 +31,9 @@ export const run = ({ ...services }) => {
     self.isLight() ? self.switchDark() : self.switchLight();
   });
 
-  windowScrollService.onScroll(() => {
+  windowScrollService.onScroll((e) => {
     const self = windowScrollService;
     self.animation();
-    self.prevnetOverlapScroll();
   });
 
   navibarService.onClick((e) => {

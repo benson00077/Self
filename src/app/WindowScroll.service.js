@@ -2,6 +2,7 @@
 
 class ScreenCtn {
   constructor(scrollableLen) {
+    this.posnIndicator = document.querySelector("#main-posn-indicator");
     this.unlockScreen = document.querySelector("#unlock");
     this.msgs = document.querySelectorAll("#message p");
     this.file = document.querySelector("#file-downloading");
@@ -10,7 +11,9 @@ class ScreenCtn {
   }
 
   main() {
-    let scrollPosn = window.pageYOffset;
+    // let scrollPosn = window.pageYoffset();
+    const scrollPosn =
+      0 - Math.floor(this.posnIndicator.getBoundingClientRect().top);
     this.animation_unlockScreen(scrollPosn);
     this.animation_msgs(scrollPosn);
     this.animation_file(scrollPosn);
@@ -70,13 +73,16 @@ class ScreenCtn {
 
 class Mobile {
   constructor(scrollableLen) {
+    this.posnIndicator = document.querySelector("#main-posn-indicator");
     this.figure = document.querySelector("figure");
     this.frameNum = 12;
     this.frameLen = scrollableLen * (1 / this.frameNum);
   }
 
   main() {
-    let scrollPosn = window.pageYOffset;
+    // let scrollPosn = window.pageYoffset();
+    const scrollPosn =
+      0 - Math.floor(this.posnIndicator.getBoundingClientRect().top);
     this.animation(scrollPosn);
   }
 
@@ -109,7 +115,8 @@ class Mobile {
 
 export class WindowScrollService {
   constructor() {
-    this.ctn = window;
+    //this.ctn = window;
+    this.ctn = document.querySelector("#main");
     this.scrollableLen = document.querySelector("#content").offsetTop; // only when #content located in the bottom
     this.screenCtn = new ScreenCtn(this.scrollableLen);
     this.mobile = new Mobile(this.scrollableLen);
@@ -121,20 +128,8 @@ export class WindowScrollService {
     this.mobile.main();
   }
 
-  /** 這個功能也要反向綁定到 this.childScrollCtn
-   *  子頁面卷軸時，不要捲軸到父頁面、
-   *  父頁面卷軸時，不要捲軸到子頁面
-   */
-  prevnetOverlapScroll() {
-    /* prevent scroll the inside div before outside one sroll to bottom */
-    const tolerate = 5; // TBD:  > tolerate should hook with 瀏覽器 %大小
-    const scrollPosn = window.pageYOffset;
-    scrollPosn + tolerate < this.scrollableLen
-      ? (this.childScrollCtn.style.overflowY = "hidden")
-      : (this.childScrollCtn.style.overflowY = "scroll");
-  }
-
   onScroll(cb) {
     this.ctn.addEventListener("scroll", cb);
+    //window.addEventListener("scroll", cb, true);
   }
 }
