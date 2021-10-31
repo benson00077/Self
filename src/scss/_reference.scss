@@ -1,58 +1,55 @@
-@import './variables';
-
+@import "./variables";
 
 .reference {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.reference-columns{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: $column-width;
+.reference-columns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $column-width;
 }
 
 .reference-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-top: 1px solid $border-underline;
-    padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 1px solid $border-underline;
+  padding-top: 5vh;
 }
 
 .reference-column-img {
-    width: 380px;
-    height: auto;
-    border-radius: 10px;
+  width: 380px;
+  height: auto;
+  border-radius: 10px;
 }
 
 .reference-column-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    h3 {
-        font-size: calc(1.1rem + .6vw);
-    }
+  h3 {
+    font-size: calc(1.1rem + 0.6vw);
+  }
 
-    div {
-        width: 90%;
-    }
+  div {
+    width: 90%;
+  }
 }
 
-
 @media screen and (max-width: 900px) {
-    
-    .reference-columns {
-        width: 80vw;
-    }
+  .reference-columns {
+    width: 80vw;
+  }
 
-    .reference-column-img {
-        width: 300px;
-        height: auto;
-        margin-left: 0;
-    }
+  .reference-column-img {
+    width: 300px;
+    height: auto;
+    margin-left: 0;
+  }
 }

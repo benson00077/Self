@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .container {
   max-width: 1200px;
@@ -7,16 +7,16 @@
   flex-direction: row;
   justify-content: center;
 
-  a{
-      font-size: 12px;
-      text-decoration: none;
-      @include theme(){
-          color: theme-get('text-muted');
-      };
+  a {
+    font-size: 12px;
+    text-decoration: none;
+    @include theme() {
+      color: theme-get("text-muted");
+    }
   }
 
-  a:hover{
-      text-decoration: underline;
+  a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -37,32 +37,31 @@
   border-left: 2px dotted $border-underline;
 }
 
-.left-side-fixed::-webkit-scrollbar, .right-side-fixed::-webkit-scrollbar {
+.left-side-fixed::-webkit-scrollbar,
+.right-side-fixed::-webkit-scrollbar {
   display: none;
 }
-  
 
 @media screen and (max-width: 900px) {
   .container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .left-side-fixed {
-      width: 100vw;
-      overflow-x: scroll;
-      height: auto;
-      overflow-y: scroll;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    width: 100vw;
+    overflow-x: scroll;
+    height: auto;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .right-side-fixed {
-      width: 100vw;
-      overflow-x: scroll;
-      height: auto;
-      overflow-y: scroll;
+    width: 100vw;
+    overflow-x: scroll;
+    height: auto;
+    overflow-y: scroll;
   }
 }
-

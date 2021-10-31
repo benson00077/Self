@@ -1,15 +1,14 @@
-@import './_variables';
-
+@import "./_variables";
 
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 }
-    
+
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
 }
 
@@ -19,13 +18,15 @@
   border-radius: $mobile-border-radius;
   position: absolute;
   //background-color: $unlock-bg-color;
-  background-image: linear-gradient(rgba(39,27,148, 1), rgba(236, 195, 107, 1));
-  transition: opacity 0.4s ease-in, height 0.4s ease-in;;
+  background-image: linear-gradient(
+    rgba(39, 27, 148, 1),
+    rgba(236, 195, 107, 1)
+  );
+  transition: opacity 0.4s ease-in, height 0.4s ease-in;
   top: 0;
   z-index: $z-index-mobile-unlock;
 
-
-  &:not(.locked){
+  &:not(.locked) {
     opacity: 0;
     height: 0;
   }
@@ -44,7 +45,7 @@
     color: $light-text-link;
     // for keyframe //
     width: 12ch;
-    animation: typing 2s steps(22), blink .5s step-end infinite alternate; 
+    animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
@@ -63,7 +64,6 @@
   z-index: $z-index-mobile-bg;
 }
 
-
 .mobile-content {
   width: 89%;
   position: absolute;
@@ -76,7 +76,7 @@
     flex-direction: column;
     align-items: center;
     border-bottom: 2px solid $border-underline;
-    
+
     img {
       width: 50px;
       height: 50px;
@@ -92,18 +92,18 @@
 
     p {
       padding: 5px;
-      display: inline-block;  // inline-block could avoid p tag expanding to the width of their containers
+      display: inline-block; // inline-block could avoid p tag expanding to the width of their containers
       transition: all 0.5s ease-out;
       opacity: 1;
       height: auto;
       // Glassmorphism //
       background: $mobile-text-msg-color;
-      box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-      backdrop-filter: blur( 4px );
-      -webkit-backdrop-filter: blur( 4px );
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
       border-radius: 10px;
-      border: 1px solid rgba( 255, 255, 255, 0.18 );
-      
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
       &:not(.is-active) {
         opacity: 0;
         height: 0;
@@ -113,14 +113,13 @@
         content: "";
         position: absolute;
         width: 10%;
-        height: 5px;;
+        height: 5px;
         background-color: #003ad8;
         border-radius: 8px;
       }
     }
   }
 }
-
 
 .file-downloading {
   position: absolute;
@@ -133,7 +132,7 @@
     height: 20px;
     opacity: 1;
   }
-  
+
   &.animation-rotate {
     transform: $mobile-retate3d-reverse scale(100);
   }

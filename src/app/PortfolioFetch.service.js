@@ -1,53 +1,58 @@
-import profile from '../assets/bensontuan.png' //webpack5
-import kosub from '../assets/kosub.png'
-import github from '../assets/Github-Mark-32px.png'
-
+import profile from "../assets/bensontuan.png"; //webpack5
+import kosub from "../assets/kosub.png";
+import github from "../assets/Github-Mark-32px.png";
 
 export class PortfolioFetchService {
-  constructor(){
-    this.ctnSwitchBtn = document.querySelector('#resume-switcher');
-    this.state = "eng"
-    this.srcs = { 
-      eng: 'https://benson00077.github.io/Self_api/json/resumeData0428.json',
-      zh: 'https://benson00077.github.io/Self_api/json/resumeData0428_2.json' 
-    }
+  constructor() {
+    this.ctnSwitchBtn = document.querySelector("#resume-switcher");
+    this.state = "eng";
+    this.srcs = {
+      eng: "https://benson00077.github.io/Self_api/json/resumeData0428.json",
+      zh: "https://benson00077.github.io/Self_api/json/resumeData0428_2.json",
+    };
   }
 
   init() {
-    this.jsonImporter(this.srcs.eng)
+    this.jsonImporter(this.srcs.eng);
   }
 
   onClick(cb) {
-    this.ctnSwitchBtn.addEventListener("click", cb)
+    this.ctnSwitchBtn.addEventListener("click", cb);
   }
 
   jsonImporter(jsonUrl) {
     fetch(jsonUrl)
-      .then(res => res.json())
-      .then(data => {
-        this.renderCtn(data)
+      .then((res) => res.json())
+      .then((data) => {
+        this.renderCtn(data);
       })
-      .catch(err => console.log(err))
+      .catch((err) => console.log(err));
   }
 
   src_handler(href, img_path, alt) {
-    return (
-      `
+    return `
       <a href=${href} target="_blank">
           <img class="reference-column-img" src=${img_path} alt=${alt}>
       </a>
-      `
-    )
+      `;
   }
-  
+
   renderCtn(data) {
-    const about = document.querySelector("#about")
-    const skills = document.querySelector("#skills")
-    const experience = document.querySelector("div.container > div.right-side-fixed > div#experience")
-    const education = document.querySelector("div.container > div.right-side-fixed > div#education")
-    const portfolio = document.querySelector("div.container > div.right-side-fixed > div#portfolio")
-    const reference = document.querySelector("div.container > div.right-side-fixed > div#reference")
-    
+    const about = document.querySelector("#about");
+    const skills = document.querySelector("#skills");
+    const experience = document.querySelector(
+      "div.container > div.right-side-fixed > div#experience"
+    );
+    const education = document.querySelector(
+      "div.container > div.right-side-fixed > div#education"
+    );
+    const portfolio = document.querySelector(
+      "div.container > div.right-side-fixed > div#portfolio"
+    );
+    const reference = document.querySelector(
+      "div.container > div.right-side-fixed > div#reference"
+    );
+
     // <img src="./assets/bensontuan.png" alt="bensonTuan">
     about.innerHTML = `
     <!-- <h2>About me</h2> -->
@@ -72,7 +77,7 @@ export class PortfolioFetchService {
                 </ul>
             </div>
         </div>
-    </div>`
+    </div>`;
 
     // skills.innerHTML = `
     // <h2>${data.skills.title}</h2>
@@ -134,7 +139,7 @@ export class PortfolioFetchService {
             </div>
         </div>
     </div>
-    `
+    `;
 
     education.innerHTML = `
     <h2>${data.education.title}</h2>
@@ -167,19 +172,23 @@ export class PortfolioFetchService {
                 </div>
             </div>
         </div>
-    </div>`
+    </div>`;
 
     portfolio.innerHTML = `
       <h2>${data.portfolio.title}</h2>
       <div>Conetnet TBD</div>
-      `
+      `;
 
     reference.innerHTML = `
     <h2>${data.reference.title}</h2>
     <div class="reference-columns">
         <div class="reference-column">
             <div class="reference-column-img-section" id="img-section">
-                ${this.src_handler("https://benson00077.github.io/kosub_react/", kosub, "kosub")}
+                ${this.src_handler(
+                  "https://benson00077.github.io/kosub_react/",
+                  kosub,
+                  "kosub"
+                )}
             </div>
             <div class="reference-column-body">
                 <h3>${data.reference.content[0].item}</h3>
@@ -194,7 +203,11 @@ export class PortfolioFetchService {
     
         <div class="reference-column">
             <div class="reference-column-img-section">
-                ${this.src_handler("https://github.com/benson00077/Self/blob/main/asset/nccu.png", ".src/assets/nccu.png", "nccu")}
+                ${this.src_handler(
+                  "https://github.com/benson00077/Self/blob/main/asset/nccu.png",
+                  ".src/assets/nccu.png",
+                  "nccu"
+                )}
             </div>
             <div class="reference-column-body">
                 <h3>${data.reference.content[1].item}</h3>
@@ -210,7 +223,11 @@ export class PortfolioFetchService {
     
         <div class="reference-column" id="reference-topik">
             <div class="reference-column-img-section">
-                ${this.src_handler("https://github.com/benson00077/Self/blob/main/asset/topik2019.png", ".src/asset/topik2019.png", "topik2019")}
+                ${this.src_handler(
+                  "https://github.com/benson00077/Self/blob/main/asset/topik2019.png",
+                  ".src/asset/topik2019.png",
+                  "topik2019"
+                )}
             </div>
             <div class="reference-column-body">
                 <h3>${data.reference.content[2].item}</h3>
@@ -242,7 +259,6 @@ export class PortfolioFetchService {
           </div>
         </div>  
     </div>
-    `
+    `;
   }
-
 }

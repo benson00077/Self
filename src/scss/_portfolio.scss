@@ -1,32 +1,30 @@
-@import './variables';
-
+@import "./variables";
 
 .portfolio {
-    // font-weight: $text-weight-half;
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .portfolio-column {
-        width: $column-width;
-        // border-left: 2px solid $timeline-border;
-        // padding-left: 20px;
+  // font-weight: $text-weight-half;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .portfolio-column {
+    width: $column-width;
+    // border-left: 2px solid $timeline-border;
+    // padding-left: 20px;
 
-        p {
-            padding-bottom: 0px;
-        }
-
-        ul li {
-            padding-bottom: 0px;
-        }
+    p {
+      padding-bottom: 0px;
     }
-    
+
+    ul li {
+      padding-bottom: 0px;
+    }
+  }
 }
 
 @media screen and (max-width: 900px) {
-    .portfolio {
-        .portfolio-column {
-            width: $column-width-rwd-bigger;
-        }
+  .portfolio {
+    .portfolio-column {
+      width: $column-width-rwd-bigger;
     }
+  }
 }

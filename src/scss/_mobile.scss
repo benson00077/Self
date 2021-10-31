@@ -1,5 +1,4 @@
-@import './_variables';
-
+@import "./_variables";
 
 .opening {
   display: flex;
@@ -12,7 +11,8 @@ figure {
   transition: all 1s;
 }
 
-figure.animation { // by js
+figure.animation {
+  // by js
   transform: translateY(-300px) scale(0.8);
   //transform: scale(1.5);
 }
@@ -21,13 +21,11 @@ figure.animation-rotate {
   transform: translateY(-200px) scale(0.5) $mobile-rotate3d;
 }
 
-
 .mobile-body {
   transform: scale(1);
   opacity: 1;
-  box-shadow: 0 0 2rem 1rem rgba(black, .1);
+  box-shadow: 0 0 2rem 1rem rgba(black, 0.1);
   z-index: $z-index-mobile-body;
-
 
   position: relative;
   flex-shrink: 0;
@@ -58,11 +56,11 @@ figure.animation-rotate {
     right: $offset;
     top: $offset;
     bottom: $offset;
-    border: .4rem solid #484848;
+    border: 0.4rem solid #484848;
     border-radius: 6rem;
   }
   .layer-2 {
-    $offset: .3rem;
+    $offset: 0.3rem;
     position: absolute;
     left: $offset;
     right: $offset;
@@ -78,21 +76,21 @@ figure.animation-rotate {
     right: $offset;
     top: $offset;
     bottom: $offset;
-    border: .3rem solid #484848;
+    border: 0.3rem solid #484848;
     border-radius: 5rem;
     filter: blur(1px);
-    opacity: .5;
+    opacity: 0.5;
   }
   .layer-gradient-2 {
-    $offset: .7rem;
+    $offset: 0.7rem;
     position: absolute;
     left: $offset;
     right: $offset;
     top: $offset;
     bottom: $offset;
-    border: .4rem solid #bcbcbc;
+    border: 0.4rem solid #bcbcbc;
     border-radius: 5.6rem;
-    opacity: .5;
+    opacity: 0.5;
     filter: blur(1px);
   }
   .top-bar {
@@ -110,12 +108,12 @@ figure.animation-rotate {
       position: absolute;
       bottom: 1.25rem;
       left: -0.9rem;
-      width: .8rem;
-      height: .8rem;
-      border: .4rem solid transparent;
-      border-top: .4rem solid black;
-      border-right: .4rem solid black;
-      border-top-right-radius: .6rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 0.4rem solid transparent;
+      border-top: 0.4rem solid black;
+      border-right: 0.4rem solid black;
+      border-top-right-radius: 0.6rem;
       transform: rotate(28deg);
     }
     &:after {
@@ -123,12 +121,12 @@ figure.animation-rotate {
       position: absolute;
       bottom: 1.25rem;
       right: -0.9rem;
-      width: .8rem;
-      height: .8rem;
-      border: .4rem solid transparent;
-      border-top: .4rem solid black;
-      border-left: .4rem solid black;
-      border-top-right-radius: .6rem;
+      width: 0.8rem;
+      height: 0.8rem;
+      border: 0.4rem solid transparent;
+      border-top: 0.4rem solid black;
+      border-left: 0.4rem solid black;
+      border-top-right-radius: 0.6rem;
       transform: rotate(-28deg);
     }
   }
@@ -141,7 +139,7 @@ figure.animation-rotate {
     height: 1rem;
     background-color: rgba(255, 0, 0, 0.5);
     border-radius: 50%;
-    border: .2rem solid #1e1f22;
+    border: 0.2rem solid #1e1f22;
     background-image: linear-gradient(right, #091528, #2363a6);
   }
   .speaker {
@@ -149,19 +147,19 @@ figure.animation-rotate {
     bottom: 1.3rem;
     right: 6.5rem;
     width: 4rem;
-    height: .6rem;
+    height: 0.6rem;
     background-color: #161616;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
   }
   .button {
-    width: .3rem;
+    width: 0.3rem;
     height: 2.5rem;
     background-color: #484848;
     position: absolute;
-    left: -.2rem;
-    border-top-left-radius: .3rem;
-    border-bottom-left-radius: .3rem;
-    border: .1rem solid rgba(black, .1);
+    left: -0.2rem;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius: 0.3rem;
+    border: 0.1rem solid rgba(black, 0.1);
     border-right: none;
 
     &.silent {
@@ -178,7 +176,7 @@ figure.animation-rotate {
     &.power {
       top: 16.9rem;
       height: 5rem;
-      right: -.3rem;
+      right: -0.3rem;
       left: auto;
       transform: rotate(180deg);
     }
