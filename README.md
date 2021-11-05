@@ -7,7 +7,7 @@
   - [處理 display 消失 vs 出現](#處理-display-消失-vs-出現)
   - [CSS 效能 : Repaint & Reflow](#css-效能--repaint--reflow)
   - [CSS unit: rem](#css-unit-rem)
-  - [滑動到超出邊界的時候·不要有推擠效果？ prevent "bounce" effect when the top or bottom of a page is reached](#滑動到超出邊界的時候不要有推擠效果-prevent-bounce-effect-when-the-top-or-bottom-of-a-page-is-reached)
+  - [滑動到超出邊界的時候·不要有推擠效果？ Prevent "bounce" effect when the top or bottom of a page is reached](#滑動到超出邊界的時候不要有推擠效果-prevent-bounce-effect-when-the-top-or-bottom-of-a-page-is-reached)
 - [JavaScript notes](#javascript-notes)
   - [Javascript Multiple Event Listener, OR integrated into one Event Listenr?](#javascript-multiple-event-listener-or-integrated-into-one-event-listenr)
   - [Scrolling event api](#scrolling-event-api)
@@ -68,7 +68,7 @@ scss code [here](src/scss/_mobile-content.scss)
 - which comes in handy when doing RWD
 - compared to vh, vw
 
-## 滑動到超出邊界的時候·不要有推擠效果？ prevent "bounce" effect when the top or bottom of a page is reached
+## 滑動到超出邊界的時候·不要有推擠效果？ Prevent "bounce" effect when the top or bottom of a page is reached
 
 1. To prevent scroll chaining. [ref](https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior). <br/>
    ❓ but not work in my iOS chrome, that's because bounce scroll in the browser is a feature of some versions of iOS / macOS. see next solution.
@@ -83,8 +83,9 @@ scss code [here](src/scss/_mobile-content.scss)
 2. other solutions: body `overflow: hidden`, child div `overflow: scroll`
    - [ref1](https://stackoverflow.com/questions/12046315/prevent-overscrolling-of-web-page)
    - [ref2](https://stackoverflow.com/questions/21209223/remove-bounce-on-scroll-in-browser-issue-with-positionfixed-div)
-   - ❓ side effect: 滑鼠如果在更裡面的子區塊，就觸法不了 scroll event 而造成動畫卡住的感覺。
-   - 也許解法跟 event delegation or event capturing / bubbling 有關
+   - side effect: 但滑鼠如果在更裡面的子區塊，就觸法不了 scroll event 而造成動畫卡住的感覺。
+   - 這是因為更裡面的子區塊(e.g. figure) 本身不是 scrollable
+     - 設定`overflow: scroll` 覆蓋預設
 
 # JavaScript notes
 

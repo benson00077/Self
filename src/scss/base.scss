@@ -17,12 +17,6 @@
 @import "./resume-switcher";
 
 /** __ prevent scroll chaining / bounce scroll effect */
-
-html {
-  margin: 0;
-  overscroll-behavior: none; //Chrome 63+, Firefox 59+ and Opera 50+
-}
-
 html,
 body {
   height: 100%;
@@ -30,7 +24,7 @@ body {
 }
 
 .main {
-  height: auto;
+  height: 100vh;
   position: absolute;
   top: 0;
   bottom: 0;
